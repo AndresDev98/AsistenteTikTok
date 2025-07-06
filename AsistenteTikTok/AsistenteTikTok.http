@@ -1,6 +1,6 @@
 @AsistenteTikTok_HostAddress = http://localhost:5153
 
-GET {{AsistenteTikTok_HostAddress}}/weatherforecast/
+POST {{AsistenteTikTok_HostAddress}}/api/bot/create/
 Accept: application/json
 
 ###

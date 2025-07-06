@@ -8,6 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AsistenteTikTok.Application\AsistenteTikTok.Application.csproj" />
+    <ProjectReference Include="..\AsistenteTikTok.Domain\AsistenteTikTok.Domain.csproj" />
+    <ProjectReference Include="..\AsistenteTikTok.Infrastructure\AsistenteTikTok.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
