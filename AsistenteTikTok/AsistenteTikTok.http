@@ -1,0 +1,6 @@
+@AsistenteTikTok_HostAddress = http://localhost:5153
+
+GET {{AsistenteTikTok_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
