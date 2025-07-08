@@ -29,5 +29,23 @@ namespace AsistenteTikTok.Infrastructure.Files
 
             Console.WriteLine($"[✓] Cuenta guardada en: {fullPath}");
         }
+
+        public async Task<IEnumerable<BotBatchRequest>> GetAllAsync()
+        {
+            var files = Directory.GetFiles(FolderPath, "*.json");
+            var bots = new List<BotBatchRequest>();
+
+            foreach (var file in files)
+            {
+                var json = await File.ReadAllTextAsync(file);
+                var bot = JsonSerializer.Deserialize<BotBatchRequest>(json);
+                if (bot != null)
+                    bots.Add(bot);
+            }
+
+            return bots;
+        }
+
+
     }
 }

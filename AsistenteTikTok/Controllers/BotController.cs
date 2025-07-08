@@ -1,4 +1,6 @@
-﻿using AsistenteTikTok.Application.UseCases;
+﻿using AsistenteTikTok.Application.Interfaces;
+using AsistenteTikTok.Application.UseCases;
+using AsistenteTikTok.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AsistenteTikTok.Api.Controllers
@@ -30,5 +32,40 @@ namespace AsistenteTikTok.Api.Controllers
                 result.CreatedAt
             });
         }
+
+
+        [HttpGet("list")]
+        public async Task<IActionResult> ListBots([FromServices] IBotAccountRepository repo)
+        {
+            var bots = await repo.GetAllAsync();
+            return Ok(bots);
+        }
+
+
+
+        [HttpPost("batch")]
+        public async Task<IActionResult> CreateMultipleBots([FromBody] BotBatchRequest request)
+        {
+            var bots = new List<object>();
+
+            for (int i = 0; i < request.Count; i++)
+            {
+                Console.WriteLine($"[*] Creando bot {i + 1} de {request.Count}");
+                var bot = await _botCreator.CreateBotAsync(request.EmulatorId);
+                if (bot != null)
+                {
+                    bots.Add(new
+                    {
+                        bot.Username,
+                        bot.Email,
+                        bot.Status,
+                        bot.CreatedAt
+                    });
+                }
+            }
+
+            return Ok(bots);
+        }
+
     }
 }

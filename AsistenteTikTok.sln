@@ -3,15 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsistenteTikTok.Api", "AsistenteTikTok\AsistenteTikTok.Api.csproj", "{BA95C94C-4C59-48E8-A54B-DD2F8A8FB27E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsistenteTikTok.Api", "AsistenteTikTok\AsistenteTikTok.Api.csproj", "{BA95C94C-4C59-48E8-A54B-DD2F8A8FB27E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsistenteTikTok.Application", "AsistenteTikTok.Application\AsistenteTikTok.Application.csproj", "{60A5EAD2-1E06-41B2-B44D-FEADF5EA0040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsistenteTikTok.Application", "AsistenteTikTok.Application\AsistenteTikTok.Application.csproj", "{60A5EAD2-1E06-41B2-B44D-FEADF5EA0040}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsistenteTikTok.Domain", "AsistenteTikTok.Domain\AsistenteTikTok.Domain.csproj", "{F589E30D-506C-4FD0-9380-46F3CE5E9411}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsistenteTikTok.Domain", "AsistenteTikTok.Domain\AsistenteTikTok.Domain.csproj", "{F589E30D-506C-4FD0-9380-46F3CE5E9411}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsistenteTikTok.Infrastructure", "AsistenteTikTok.Infrastructure\AsistenteTikTok.Infrastructure.csproj", "{D4694F44-B64D-4A3B-A98F-66C3F898239D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsistenteTikTok.Infrastructure", "AsistenteTikTok.Infrastructure\AsistenteTikTok.Infrastructure.csproj", "{D4694F44-B64D-4A3B-A98F-66C3F898239D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsistenteTikTok.Shared", "AsistenteTikTok.Shared\AsistenteTikTok.Shared.csproj", "{ED89A9DA-47D7-44A9-91C6-E79FEACD3BD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsistenteTikTok.Shared", "AsistenteTikTok.Shared\AsistenteTikTok.Shared.csproj", "{ED89A9DA-47D7-44A9-91C6-E79FEACD3BD7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{50CF7EC0-A555-45AB-BE2C-947DD8C9A164}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -10,5 +10,7 @@ namespace AsistenteTikTok.Application.Interfaces
     public interface IBotAccountRepository
     {
         Task SaveAsync(BotAccount bot);
+        Task<IEnumerable<BotBatchRequest>> GetAllAsync();
+
     }
 }
